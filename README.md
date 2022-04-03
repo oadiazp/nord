@@ -13,6 +13,8 @@ This will set up a PostgreSQL database, a web server for the API and 3 clients t
 
 The possible requests are documented in the requests.http file.
 
+The API should be available in (here)[http://localhost]
+
 ## Assumptions
 
 1. Don't makes sense to save all the generated events: they just have an historical value and the requested features doesn't mention nothing about that so I consider better to receive an event and do the expected actions with that:
