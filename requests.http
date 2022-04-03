@@ -1,0 +1,57 @@
+#Get all busy scooters from (0, 0) to (1000, 1000)
+
+GET http://localhost:80/scooters/0/0/1000/1000/0
+Accept: application/json
+
+###
+
+#Get all free scooters from (0, 0) to (1000, 1000)
+
+GET http://localhost:80/scooters/0/0/1000/1000/1
+Accept: application/json
+
+###
+
+#Register a start trip event for the scooter 794419da-521f-4c3b-9425-a20b48040714
+
+POST http://localhost:80/events
+Content-Type: application/json
+Accept: application/json
+
+{
+  "scooter_id": "794419da-521f-4c3b-9425-a20b48040714",
+   "name": "start_trip",
+   "x": 0,
+   "y": 0
+}
+
+###
+
+#Register a update location event for the scooter 794419da-521f-4c3b-9425-a20b48040714
+
+POST http://localhost:80/events
+Content-Type: application/json
+Accept: application/json
+
+{
+  "scooter_id": "794419da-521f-4c3b-9425-a20b48040714",
+  "name": "update_location",
+  "x": 10,
+  "y": 10
+}
+
+###
+
+
+#Register an end trip event for the scooter 794419da-521f-4c3b-9425-a20b48040714
+
+POST http://localhost:80/events
+Content-Type: application/json
+Accept: application/json
+
+{
+  "scooter_id": "794419da-521f-4c3b-9425-a20b48040714",
+  "name": "end_trip",
+  "x": 10,
+  "y": 100
+}
