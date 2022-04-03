@@ -13,7 +13,7 @@ This will set up a PostgreSQL database, a web server for the API and 3 clients t
 
 The possible requests are documented in the requests.http file.
 
-The API should be available in (here)[http://localhost]
+The API should be available in [here](http://localhost)
 
 ## Assumptions
 
